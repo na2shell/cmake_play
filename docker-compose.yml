@@ -1,0 +1,10 @@
+version: "3"
+services:
+  test_env:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./src:/home/src
+    working_dir: /home/src
