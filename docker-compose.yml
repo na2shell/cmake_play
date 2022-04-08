@@ -2,9 +2,17 @@ version: "3"
 services:
   test_env:
     build:
-      context: ./
+      context: ./centos_7
       dockerfile: Dockerfile
     tty: true
     volumes:
       - ./src:/home/src
     working_dir: /home/src
+  ubuntu_env:
+    build:
+        context: ./ubuntu_20_04
+        dockerfile: Dockerfile
+      tty: true
+      volumes:
+        - ./src:/home/src
+      working_dir: /home/src
