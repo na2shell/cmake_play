@@ -1,18 +1,13 @@
-#include <stdexcept>
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
-#include "factorial.h"
-
-TEST(test_factorial, positive_values) {
-    EXPECT_EQ(1, factorial(1));
-    EXPECT_EQ(2, factorial(2));
-    EXPECT_EQ(6, factorial(3));
+int add(int x, int y) {
+    return x + y;
 }
 
-TEST(test_factorial, zero) {
-    EXPECT_EQ(1, factorial(0));
+TEST(AddTest, TwoAndThree) {
+    EXPECT_EQ(add(2, 3), 5);
 }
 
-TEST(test_factorial, negative_value) {
-    EXPECT_THROW(factorial(-1), std::invalid_argument);
+TEST(TestCaseName, TestName){
+    EXPECT_EQ(1, 1);
 }

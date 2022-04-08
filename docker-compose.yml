@@ -10,9 +10,9 @@ services:
     working_dir: /home/src
   ubuntu_env:
     build:
-        context: ./ubuntu_20_04
-        dockerfile: Dockerfile
-      tty: true
-      volumes:
-        - ./src:/home/src
-      working_dir: /home/src
+      context: ./ubuntu_20_04
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./src:/home/src
+    working_dir: /home/src
